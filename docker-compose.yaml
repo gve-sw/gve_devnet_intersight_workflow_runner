@@ -1,0 +1,11 @@
+version: "3"
+services:
+  web:
+    container_name: Intersight_Workflow_runner
+    restart: always
+
+    volumes:
+      - /usr/src/app
+    command: python SampleCode/run_workflow.py
+    build:
+      context: .
